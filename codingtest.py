@@ -49,3 +49,5 @@ def moons_count_having_rings(All_planet):
     for i in range(planet_having_rings):
         moons_count+=All_planet.planet_having_rings.moons[i]
         print(moons_count)
+
+moons_count_having_rings(All_planet)
