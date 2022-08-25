@@ -31,7 +31,6 @@ class Uranus(All_planet):
         
 def test():
     mercury=Mercury(planet="mercury",atmospheric_gases="nill",moons=0,rings="No")
-    print()
     venus=Venus(planet="venus",atmospheric_gases=["carbon_ioxide","Nitrogen"],moons=0,rings="No")
     earth=Earth(planet="earth",atmospheric_gases=["Nitrogen","oxygen"],moons=1,rings="No")
     jupitor=Jupitor(planet="jupitor",atmospheric_gases=["hydrogen","helium"],moons=79,rings="Yes")
@@ -43,3 +42,10 @@ def gasesplanet(All_planet):
     print(gases_planet.planet)
     
 gasesplanet(All_planet)
+
+def moons_count_having_rings(All_planet):
+    moons_count=0
+    planet_having_rings=All_planet().count(rings="Yes")
+    for i in range(planet_having_rings):
+        moons_count+=All_planet.planet_having_rings.moons[i]
+        print(moons_count)
